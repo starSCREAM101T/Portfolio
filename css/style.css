@@ -1,0 +1,1086 @@
+/* Cyber Futuristic Portfolio Styles */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #00ffff;
+    --secondary-color: #ff00ff;
+    --accent-color: #00ff00;
+    --warning-color: #ffff00;
+    --danger-color: #ff0080;
+    --success-color: #00ff80;
+    --dark-bg: #0a0a0a;
+    --card-bg: rgba(20, 20, 20, 0.9);
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #808080;
+    --border-color: rgba(0, 255, 255, 0.3);
+    --glow-color: rgba(0, 255, 255, 0.5);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Cyber Background Animation */
+.cyber-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+    overflow: hidden;
+}
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: morphBackground 20s infinite;
+}
+
+.bg-layer-1 {
+    background: linear-gradient(45deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0a0a0a 75%, #1a1a2e 100%);
+    animation-delay: 0s;
+}
+
+.bg-layer-2 {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1e1e3f 25%, #2a2a5a 50%, #0a0a0a 75%, #1e1e3f 100%);
+    animation-delay: 5s;
+}
+
+.bg-layer-3 {
+    background: linear-gradient(225deg, #0a0a0a 0%, #2e1a1a 25%, #3e1616 50%, #0a0a0a 75%, #2e1a1a 100%);
+    animation-delay: 10s;
+}
+
+.bg-layer-4 {
+    background: linear-gradient(315deg, #0a0a0a 0%, #1a2e1a 25%, #16213e 50%, #0a0a0a 75%, #1a2e1a 100%);
+    animation-delay: 15s;
+}
+
+@keyframes morphBackground {
+    0%, 20% { opacity: 0; }
+    25%, 45% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* Space Elements */
+.space-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 20s ease-in-out infinite;
+}
+
+.planet-1 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #d63031);
+    box-shadow: 0 0 40px rgba(255, 107, 107, 0.4);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.planet-2 {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #74b9ff, #0984e3);
+    box-shadow: 0 0 30px rgba(116, 185, 255, 0.4);
+    top: 60%;
+    right: 15%;
+    animation-delay: -7s;
+}
+
+.planet-3 {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #a29bfe, #6c5ce7);
+    box-shadow: 0 0 25px rgba(162, 155, 254, 0.4);
+    top: 40%;
+    left: 80%;
+    animation-delay: -14s;
+}
+
+.asteroid {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: asteroidMove 15s linear infinite;
+}
+
+.asteroid-1 {
+    width: 12px;
+    height: 12px;
+    background: #636e72;
+    top: 25%;
+    left: -20px;
+    animation-delay: 0s;
+}
+
+.asteroid-2 {
+    width: 8px;
+    height: 8px;
+    background: #74b9ff;
+    top: 45%;
+    left: -20px;
+    animation-delay: -3s;
+}
+
+.asteroid-3 {
+    width: 15px;
+    height: 15px;
+    background: #fd79a8;
+    top: 65%;
+    left: -20px;
+    animation-delay: -6s;
+}
+
+.asteroid-4 {
+    width: 10px;
+    height: 10px;
+    background: #00b894;
+    top: 35%;
+    left: -20px;
+    animation-delay: -9s;
+}
+
+.asteroid-5 {
+    width: 6px;
+    height: 6px;
+    background: #fdcb6e;
+    top: 55%;
+    left: -20px;
+    animation-delay: -12s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes asteroidMove {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(calc(100vw + 40px)); }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.matrix-char {
+    position: absolute;
+    color: var(--primary-color);
+    font-family: 'Orbitron', monospace;
+    font-size: 14px;
+    opacity: 0.8;
+    animation: matrixFall linear infinite;
+}
+
+@keyframes matrixFall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Cyber Grid Overlay */
+.cyber-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    animation: gridPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes gridPulse {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+}
+
+/* Navigation Styles */
+.cyber-nav {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.cyber-logo {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-text {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, var(--glow-color), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.cyber-logo:hover .logo-glow {
+    transform: translateX(100%);
+}
+
+/* Hamburger Menu */
+.cyber-hamburger {
+    border: none;
+    background: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.cyber-hamburger:hover .hamburger-line {
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+.cyber-hamburger.collapsed .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.cyber-hamburger.collapsed .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.cyber-hamburger.collapsed .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Navigation Links */
+.cyber-nav-link {
+    color: var(--text-secondary) !important;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-text {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, var(--glow-color), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.cyber-nav-link:hover {
+    color: var(--primary-color) !important;
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.cyber-nav-link:hover .nav-glow {
+    transform: translateX(100%);
+}
+
+/* Typography */
+.cyber-title {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-shadow: 0 0 30px var(--glow-color);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.cyber-name {
+    color: var(--primary-color) !important;
+    text-shadow: 0 0 20px var(--glow-color) !important;
+    position: relative;
+    filter: none !important;
+    -webkit-filter: none !important;
+    backdrop-filter: none !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: var(--primary-color) !important;
+    background-clip: unset !important;
+}
+
+/* Typing Effect */
+.typing-effect {
+    overflow: visible;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    animation: typing 3s steps(20, end), blink-caret 0.5s step-end infinite;
+    filter: none !important;
+    text-shadow: 0 0 20px var(--glow-color) !important;
+    color: var(--primary-color) !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: var(--primary-color) !important;
+    background-clip: unset !important;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
+}
+
+.typing-effect.finished {
+    border-right: none;
+    animation: none;
+}
+
+/* Text reveal animation */
+.text-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textReveal 0.8s ease forwards;
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing text animation */
+.glow-text {
+    animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 20px var(--glow-color); }
+    100% { text-shadow: 0 0 30px var(--glow-color), 0 0 40px var(--glow-color); }
+}
+
+.cyber-text {
+    color: var(--text-primary);
+}
+
+@keyframes titleGlow {
+    0% { 
+        text-shadow: 0 0 30px var(--glow-color);
+        opacity: 1;
+    }
+    100% { 
+        text-shadow: 0 0 40px var(--glow-color), 0 0 60px var(--glow-color);
+        opacity: 0.9;
+    }
+}
+
+.cyber-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.cyber-heading {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--glow-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cyber-subheading {
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.cyber-muted {
+    color: var(--text-muted);
+}
+
+/* Buttons */
+.cyber-btn {
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    background: transparent;
+}
+
+.cyber-btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--dark-bg);
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+.cyber-btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.cyber-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--glow-color);
+}
+
+.cyber-btn:hover .btn-glow {
+    transform: translateX(100%);
+}
+
+.cyber-btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+}
+
+/* Sections */
+.cyber-section {
+    position: relative;
+    z-index: 1;
+    padding: 8rem 0;
+    clear: both;
+    width: 100%;
+    display: block;
+}
+
+/* Remove problematic animations and fix spacing */
+.about-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.skills-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    position: relative;
+    z-index: 1;
+    clear: both;
+}
+
+/* Ensure sections don't overlap */
+section {
+    float: none;
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+
+/* Additional spacing to prevent overlap */
+#about::after,
+#skills::after,
+#experience::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 2rem;
+}
+
+/* Cards */
+.cyber-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.cyber-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px var(--glow-color);
+}
+
+.cyber-card-title {
+    color: var(--primary-color);
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cyber-card-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Icons */
+.cyber-icon {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.cyber-icon-primary {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.cyber-icon-success {
+    color: var(--success-color);
+    text-shadow: 0 0 10px rgba(0, 255, 128, 0.5);
+}
+
+.cyber-icon-warning {
+    color: var(--warning-color);
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.cyber-icon-danger {
+    color: var(--danger-color);
+    text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+}
+
+/* Badges */
+.cyber-badge {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 2px;
+    margin: 0.1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.cyber-badge-primary {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.cyber-badge-success {
+    background: var(--success-color);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.5);
+}
+
+.cyber-badge-warning {
+    background: var(--warning-color);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.cyber-badge-danger {
+    background: var(--danger-color);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+}
+
+.cyber-badge:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Profile */
+.cyber-profile {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 30px var(--glow-color);
+}
+
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    position: relative;
+    z-index: 2;
+}
+
+.cyber-border-about {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: borderPulse 2s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* Experience */
+.cyber-experience-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-experience-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px var(--glow-color);
+}
+
+.cyber-experience-title {
+    color: var(--primary-color);
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+}
+
+.cyber-experience-company {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Lists */
+.cyber-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cyber-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.cyber-list li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+/* Form Styles */
+.cyber-form-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.cyber-label {
+    color: var(--primary-color);
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.cyber-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    padding: 0.75rem;
+    font-family: 'Exo 2', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--glow-color);
+    color: var(--text-primary);
+}
+
+.cyber-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Contact Items */
+.cyber-contact-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cyber-contact-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px var(--glow-color);
+}
+
+.cyber-contact-title {
+    color: var(--primary-color);
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.cyber-contact-text {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Projects Section */
+.project-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.project-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--card-bg), rgba(0, 255, 255, 0.1));
+    transition: all 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-description {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dashboard-preview {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.todo-preview {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.weather-preview {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.portfolio-preview {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.ecommerce-preview {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.calculator-preview {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+/* Footer */
+.cyber-footer {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+.cyber-footer-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Simplified animations to prevent overlay issues */
+.animate-fade-in,
+.animate-fade-in-delay,
+.animate-fade-in-delay-2,
+.animate-slide-left,
+.animate-slide-right {
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+/* Remove problematic keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cyber-title {
+        font-size: 2.5rem;
+    }
+    
+    .cyber-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cyber-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .cyber-card {
+        padding: 1.5rem;
+    }
+    
+    .cyber-profile {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .cyber-nav-link {
+        padding: 0.75rem 1rem;
+        margin: 0.25rem 0;
+    }
+    
+    /* Contact items responsive */
+    .contact-info .row > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .cyber-title {
+        font-size: 2rem;
+    }
+    
+    .cyber-form-container {
+        padding: 1.5rem;
+    }
+    
+    .cyber-contact-item {
+        padding: 1rem;
+    }
+    
+    /* Contact items mobile */
+    .contact-info .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .cyber-contact-item {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
