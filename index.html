@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio - Muhammad Haris Iqbal</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cyber Background Animation -->
+    <div class="cyber-background">
+        <div class="background-layer bg-layer-1"></div>
+        <div class="background-layer bg-layer-2"></div>
+        <div class="background-layer bg-layer-3"></div>
+        <div class="background-layer bg-layer-4"></div>
+    </div>
+    
+    <!-- Space Elements -->
+    <div class="space-elements">
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="planet planet-3"></div>
+        <div class="asteroid asteroid-1"></div>
+        <div class="asteroid asteroid-2"></div>
+        <div class="asteroid asteroid-3"></div>
+        <div class="asteroid asteroid-4"></div>
+        <div class="asteroid asteroid-5"></div>
+    </div>
+    
+    <!-- Matrix Rain Effect -->
+    <div class="matrix-rain" id="matrixRain"></div>
+    
+    <!-- Cyber Grid Overlay -->
+    <div class="cyber-grid"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top cyber-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold cyber-logo" href="#home">
+                <span class="logo-text">PORTFOLIO</span>
+                <span class="logo-glow"></span>
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="navbar-toggler cyber-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto cyber-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link cyber-nav-link" href="#home">
+                            <span class="nav-text">Home</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-nav-link" href="#about">
+                            <span class="nav-text">About</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-nav-link" href="#skills">
+                            <span class="nav-text">Skills</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-nav-link" href="#projects">
+                            <span class="nav-text">Projects</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-nav-link" href="#experience">
+                            <span class="nav-text">Experience</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-nav-link" href="#contact">
+                            <span class="nav-text">Contact</span>
+                            <span class="nav-glow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3 animate-fade-in cyber-title">
+                            <span class="cyber-text">Hello, I'm</span>
+                            <span class="cyber-name typing-effect" id="typingName">Muhammad Haris Iqbal</span>
+                        </h1>
+                        <p class="lead mb-4 animate-fade-in-delay cyber-subtitle">
+                            Front End + Back End Developer & Creative Designer specializing in web development, mobile applications, and graphic design.
+                        </p>
+                        <div class="hero-buttons animate-fade-in-delay-2">
+                            <a href="#experience" class="btn cyber-btn cyber-btn-primary me-3">
+                                <span class="btn-text">View My Experience</span>
+                                <span class="btn-glow"></span>
+                            </a>
+                            <a href="#contact" class="btn cyber-btn cyber-btn-outline">
+                                <span class="btn-text">Get In Touch</span>
+                                <span class="btn-glow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="cyber-section about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title fw-bold cyber-heading">About Me</h2>
+                    <p class="lead cyber-subtitle">Get to know more about my background and expertise</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4">
+                    <div class="about-image animate-slide-left">
+                        <div class="profile-picture-about cyber-profile">
+                            <img src="profile.jpg" alt="Muhammad Haris Iqbal" class="profile-img">
+                            <div class="cyber-border-about"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="about-content animate-slide-right cyber-content">
+                        <h3 class="mb-3 cyber-subheading">Professional Summary</h3>
+                        <p class="mb-4 cyber-text">
+                            Creative and detail-oriented Front End + Back End Developer & Graphic Designer with experience in web development, 
+                            mobile applications, and digital design. Currently pursuing Computer Science at Capital University of Science and Technology 
+                            since 2021. Skilled in modern web technologies and Adobe Creative Suite with a proven track record of delivering 
+                            high-quality projects that meet deadlines and exceed client expectations.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="mb-3 cyber-subheading">Education</h4>
+                                <ul class="list-unstyled cyber-list">
+                                    <li class="mb-2">
+                                        <i class="bi bi-mortarboard cyber-icon me-2"></i>
+                                        <strong>Bachelor's in Computer Science</strong><br>
+                                        <small class="cyber-muted">Capital University of Science & Technology (2021-Present)</small>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-mortarboard cyber-icon me-2"></i>
+                                        <strong>Intermediate in Computer Science (ICS)</strong><br>
+                                        <small class="cyber-muted">Punjab College (2020)</small>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-mortarboard cyber-icon me-2"></i>
+                                        <strong>Matriculation</strong><br>
+                                        <small class="cyber-muted">Army Public School and College (2017)</small>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="mb-3 cyber-subheading">Creative Skills</h4>
+                                <ul class="list-unstyled cyber-list">
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Logo Design & Branding</li>
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Web Design & UI/UX</li>
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Video Editing & Production</li>
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Photo Editing & Retouch</li>
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Videography & Photography</li>
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Social Media Design</li>
+                                    <li class="mb-2"><i class="bi bi-palette cyber-icon me-2"></i>Adobe Creative Suite</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="cyber-section skills-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title fw-bold cyber-heading">Skills & Technologies</h2>
+                    <p class="lead cyber-subtitle">Technologies I work with to build amazing applications</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card cyber-card text-center h-100">
+                        <div class="skill-icon mb-3">
+                            <i class="bi bi-code-slash display-4 cyber-icon-primary"></i>
+                        </div>
+                        <h4 class="cyber-card-title">Web Development</h4>
+                        <p class="mb-3 cyber-card-text">Building responsive and interactive web applications</p>
+                        <div class="skill-tags">
+                            <span class="cyber-badge cyber-badge-primary">HTML</span>
+                            <span class="cyber-badge cyber-badge-primary">CSS</span>
+                            <span class="cyber-badge cyber-badge-primary">PHP</span>
+                            <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                            <span class="cyber-badge cyber-badge-primary">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card cyber-card text-center h-100">
+                        <div class="skill-icon mb-3">
+                            <i class="bi bi-laptop display-4 cyber-icon-success"></i>
+                        </div>
+                        <h4 class="cyber-card-title">Programming</h4>
+                        <p class="mb-3 cyber-card-text">Core programming and software development skills</p>
+                        <div class="skill-tags">
+                            <span class="cyber-badge cyber-badge-success">C++</span>
+                            <span class="cyber-badge cyber-badge-success">OOP</span>
+                            <span class="cyber-badge cyber-badge-success">Data Structures</span>
+                            <span class="cyber-badge cyber-badge-success">DBMS</span>
+                            <span class="cyber-badge cyber-badge-success">Mobile Apps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card cyber-card text-center h-100">
+                        <div class="skill-icon mb-3">
+                            <i class="bi bi-palette display-4 cyber-icon-warning"></i>
+                        </div>
+                        <h4 class="cyber-card-title">Graphic Design</h4>
+                        <p class="mb-3 cyber-card-text">Creating visually compelling digital designs and branding</p>
+                        <div class="skill-tags">
+                            <span class="cyber-badge cyber-badge-warning">Logo Design</span>
+                            <span class="cyber-badge cyber-badge-warning">Photoshop</span>
+                            <span class="cyber-badge cyber-badge-warning">Illustrator</span>
+                            <span class="cyber-badge cyber-badge-warning">Canva Pro</span>
+                            <span class="cyber-badge cyber-badge-warning">Web Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card cyber-card text-center h-100">
+                        <div class="skill-icon mb-3">
+                            <i class="bi bi-camera-video display-4 cyber-icon-danger"></i>
+                        </div>
+                        <h4 class="cyber-card-title">Content Creation</h4>
+                        <p class="mb-3 cyber-card-text">Video editing, photography, and social media content</p>
+                        <div class="skill-tags">
+                            <span class="cyber-badge cyber-badge-danger">Video Editing</span>
+                            <span class="cyber-badge cyber-badge-danger">Photo Editing</span>
+                            <span class="cyber-badge cyber-badge-danger">Videography</span>
+                            <span class="cyber-badge cyber-badge-danger">Reels Design</span>
+                            <span class="cyber-badge cyber-badge-danger">MS Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="cyber-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title fw-bold cyber-heading">Featured Projects</h2>
+                    <p class="lead cyber-subtitle">Explore my latest work and interactive demonstrations</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Project 1: Interactive Dashboard -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card cyber-card h-100">
+                        <div class="project-image-container">
+                            <div class="project-image dashboard-preview">
+                                <i class="bi bi-graph-up display-4 text-primary"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="projects/dashboard.html" target="_blank" class="btn cyber-btn cyber-btn-primary btn-sm">
+                                    <span class="btn-text">View Live</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title cyber-card-title">Analytics Dashboard</h4>
+                            <p class="project-description cyber-card-text">Interactive data visualization dashboard with real-time charts and responsive design.</p>
+                            <div class="project-tech">
+                                <span class="cyber-badge cyber-badge-primary">HTML</span>
+                                <span class="cyber-badge cyber-badge-primary">CSS</span>
+                                <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                                <span class="cyber-badge cyber-badge-success">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Task Management App -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card cyber-card h-100">
+                        <div class="project-image-container">
+                            <div class="project-image todo-preview">
+                                <i class="bi bi-check-circle display-4 text-success"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="projects/todo.html" target="_blank" class="btn cyber-btn cyber-btn-primary btn-sm">
+                                    <span class="btn-text">View Live</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title cyber-card-title">Task Manager</h4>
+                            <p class="project-description cyber-card-text">Full-featured task management application with local storage and drag-and-drop functionality.</p>
+                            <div class="project-tech">
+                                <span class="cyber-badge cyber-badge-primary">HTML</span>
+                                <span class="cyber-badge cyber-badge-primary">CSS</span>
+                                <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                                <span class="cyber-badge cyber-badge-success">Local Storage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Weather App -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card cyber-card h-100">
+                        <div class="project-image-container">
+                            <div class="project-image weather-preview">
+                                <i class="bi bi-cloud-sun display-4 text-warning"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="projects/weather.html" target="_blank" class="btn cyber-btn cyber-btn-primary btn-sm">
+                                    <span class="btn-text">View Live</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title cyber-card-title">Weather Dashboard</h4>
+                            <p class="project-description cyber-card-text">Beautiful weather application with location-based forecasts and animated backgrounds.</p>
+                            <div class="project-tech">
+                                <span class="cyber-badge cyber-badge-primary">HTML</span>
+                                <span class="cyber-badge cyber-badge-primary">CSS</span>
+                                <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                                <span class="cyber-badge cyber-badge-warning">API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Portfolio Website -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card cyber-card h-100">
+                        <div class="project-image-container">
+                            <div class="project-image portfolio-preview">
+                                <i class="bi bi-person-workspace display-4 text-danger"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="projects/portfolio.html" target="_blank" class="btn cyber-btn cyber-btn-primary btn-sm">
+                                    <span class="btn-text">View Live</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title cyber-card-title">Creative Portfolio</h4>
+                            <p class="project-description cyber-card-text">Responsive portfolio website showcasing creative design work and projects.</p>
+                            <div class="project-tech">
+                                <span class="cyber-badge cyber-badge-primary">HTML</span>
+                                <span class="cyber-badge cyber-badge-primary">CSS</span>
+                                <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                                <span class="cyber-badge cyber-badge-danger">Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: E-commerce Demo -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card cyber-card h-100">
+                        <div class="project-image-container">
+                            <div class="project-image ecommerce-preview">
+                                <i class="bi bi-cart display-4 text-primary"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="projects/ecommerce.html" target="_blank" class="btn cyber-btn cyber-btn-primary btn-sm">
+                                    <span class="btn-text">View Live</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title cyber-card-title">E-commerce Store</h4>
+                            <p class="project-description cyber-card-text">Modern e-commerce interface with shopping cart, product filters, and checkout process.</p>
+                            <div class="project-tech">
+                                <span class="cyber-badge cyber-badge-primary">HTML</span>
+                                <span class="cyber-badge cyber-badge-primary">CSS</span>
+                                <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                                <span class="cyber-badge cyber-badge-success">Shopping Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Calculator App -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card cyber-card h-100">
+                        <div class="project-image-container">
+                            <div class="project-image calculator-preview">
+                                <i class="bi bi-calculator display-4 text-warning"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="projects/calculator.html" target="_blank" class="btn cyber-btn cyber-btn-primary btn-sm">
+                                    <span class="btn-text">View Live</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title cyber-card-title">Advanced Calculator</h4>
+                            <p class="project-description cyber-card-text">Scientific calculator with advanced functions and beautiful cyber-themed interface.</p>
+                            <div class="project-tech">
+                                <span class="cyber-badge cyber-badge-primary">HTML</span>
+                                <span class="cyber-badge cyber-badge-primary">CSS</span>
+                                <span class="cyber-badge cyber-badge-primary">JavaScript</span>
+                                <span class="cyber-badge cyber-badge-warning">Math Functions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="cyber-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title fw-bold cyber-heading">Work Experience</h2>
+                    <p class="lead cyber-subtitle">My professional journey and achievements</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="experience-item cyber-experience-card p-4 mb-4">
+                        <div class="experience-header d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h4 class="mb-1 cyber-experience-title">Content Creator & Graphic Designer</h4>
+                                <h6 class="cyber-experience-company mb-0">Shab_e.Hijr (Event Organizer Page)</h6>
+                            </div>
+                            <span class="cyber-badge cyber-badge-primary">2020 – Present</span>
+                        </div>
+                        <div class="experience-content">
+                            <p class="mb-3 cyber-text">
+                                Leading creative content development and visual design for social media campaigns, 
+                                creating engaging graphics for event promotion, and managing brand consistency across platforms.
+                            </p>
+                            <ul class="cyber-list">
+                                <li>Designed promotional materials increasing event attendance by 40%</li>
+                                <li>Created consistent brand identity and visual guidelines</li>
+                                <li>Managed social media content calendar and engagement strategies</li>
+                                <li>Collaborated with event organizers to create compelling marketing materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="cyber-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title fw-bold cyber-heading">Get In Touch</h2>
+                    <p class="lead cyber-subtitle">Let's connect and discuss opportunities</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-container cyber-form-container">
+                        <form id="contactForm" class="cyber-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label cyber-label">Name</label>
+                                        <input type="text" class="form-control cyber-input" id="name" name="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label cyber-label">Email</label>
+                                        <input type="email" class="form-control cyber-input" id="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label cyber-label">Subject</label>
+                                <input type="text" class="form-control cyber-input" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label cyber-label">Message</label>
+                                <textarea class="form-control cyber-input" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn cyber-btn cyber-btn-primary">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-glow"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="contact-info text-center">
+                        <div class="row">
+                            <div class="col-md-2 mb-3">
+                                <div class="contact-item cyber-contact-item">
+                                    <i class="bi bi-envelope-at display-5 cyber-icon mb-3"></i>
+                                    <h5 class="cyber-contact-title">Email</h5>
+                                    <p class="cyber-contact-text">hmalik7644@gmail.com</p>
+                                    <a href="mailto:hmalik7644@gmail.com" class="btn cyber-btn cyber-btn-outline btn-sm mt-2">
+                                        <span class="btn-text">Send Email</span>
+                                        <span class="btn-glow"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <div class="contact-item cyber-contact-item">
+                                    <i class="bi bi-whatsapp display-5 cyber-icon mb-3"></i>
+                                    <h5 class="cyber-contact-title">WhatsApp</h5>
+                                    <p class="cyber-contact-text">+923239395545</p>
+                                    <a href="https://wa.me/923239395545" target="_blank" class="btn cyber-btn cyber-btn-outline btn-sm mt-2">
+                                        <span class="btn-text">Message</span>
+                                        <span class="btn-glow"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <div class="contact-item cyber-contact-item">
+                                    <i class="bi bi-geo-alt display-5 cyber-icon mb-3"></i>
+                                    <h5 class="cyber-contact-title">Location</h5>
+                                    <p class="cyber-contact-text">Rawalpindi, Pakistan</p>
+                                    <a href="https://maps.google.com/?q=Rawalpindi,Pakistan" target="_blank" class="btn cyber-btn cyber-btn-outline btn-sm mt-2">
+                                        <span class="btn-text">View Map</span>
+                                        <span class="btn-glow"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <div class="contact-item cyber-contact-item">
+                                    <i class="bi bi-linkedin display-5 cyber-icon mb-3"></i>
+                                    <h5 class="cyber-contact-title">LinkedIn</h5>
+                                    <p class="cyber-contact-text">Connect professionally</p>
+                                    <a href="https://www.linkedin.com/in/harris-malik-175556349" target="_blank" class="btn cyber-btn cyber-btn-outline btn-sm mt-2">
+                                        <span class="btn-text">Connect</span>
+                                        <span class="btn-glow"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <div class="contact-item cyber-contact-item">
+                                    <i class="bi bi-github display-5 cyber-icon mb-3"></i>
+                                    <h5 class="cyber-contact-title">GitHub</h5>
+                                    <p class="cyber-contact-text">View my projects</p>
+                                    <a href="https://github.com/starSCREAM101T" target="_blank" class="btn cyber-btn cyber-btn-outline btn-sm mt-2">
+                                        <span class="btn-text">View Code</span>
+                                        <span class="btn-glow"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <div class="contact-item cyber-contact-item">
+                                    <i class="bi bi-telephone display-5 cyber-icon mb-3"></i>
+                                    <h5 class="cyber-contact-title">Phone</h5>
+                                    <p class="cyber-contact-text">+923239395545</p>
+                                    <a href="tel:+923239395545" class="btn cyber-btn cyber-btn-outline btn-sm mt-2">
+                                        <span class="btn-text">Call Now</span>
+                                        <span class="btn-glow"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 cyber-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="mb-0 cyber-footer-text">
+                        &copy; 2025 Muhammad Haris Iqbal. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
